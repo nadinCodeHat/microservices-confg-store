@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
@@ -24,6 +26,43 @@ class MyHomePage extends StatefulWidget {
   @override
   _ButtonState createState() => new _ButtonState();
 }
+
+/*
+class _ButtonState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {
+                // Respond to button press
+              },
+              child: Text('TEXT BUTTON'),
+            ),
+            SizedBox(height: 8.0),
+            OutlinedButton(
+              onPressed: () {
+                // Respond to button press
+              },
+              child: Text("OUTLINED BUTTON"),
+            ),
+            SizedBox(height: 8.0),
+            ElevatedButton(
+              onPressed: () {
+                // Respond to button press
+              },
+              child: Text("CONTAINED BUTTON"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+*/
 
 class _ButtonState extends State<MyHomePage> {
   @override
@@ -66,17 +105,3 @@ class _ButtonState extends State<MyHomePage> {
     ));
   }
 }
-
-
-
-/*
-  new ElevatedButton(
-              child: new Text('Object Detector'),
-              style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                backgroundColor:
-                    MaterialStateProperty.all<Color>(Colors.blueAccent),
-              ),
-              onPressed: () {},
-            ),
-            */

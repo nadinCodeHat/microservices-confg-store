@@ -1,7 +1,13 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:real_time_object_detection/homepage.dart';
 
-void main() {
+List<CameraDescription> cameras;
+
+Future<void> main() async {
+  // initialize the cameras when the app starts
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   runApp(MyApp());
 }
 
